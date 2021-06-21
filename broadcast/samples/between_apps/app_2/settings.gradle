@@ -1,0 +1,2 @@
+rootProject.name = "InterApps2"
+include ':app'
