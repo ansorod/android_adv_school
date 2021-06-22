@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SystemBroadcasts</string>
+
+    <string name="label_bluetooth_state">Bluetooth state:</string>
+    <string name="label_network_state">Network state:</string>
+    <string name="label_airplane_mode_state">Airplane mode state:</string>
+
+    <string name="state_active">Active</string>
+    <string name="state_inactive">Inactive</string>
+    <string name="state_unknown">Unknown</string>
+
+</resources>
