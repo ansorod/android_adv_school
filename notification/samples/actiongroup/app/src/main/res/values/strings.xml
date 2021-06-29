@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActionsAndGroups</string>
+
+    <string name="button_notify">Notify</string>
+</resources>
