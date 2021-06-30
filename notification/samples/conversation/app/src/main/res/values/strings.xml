@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Conversation</string>
+    <string name="notification_action_reply">Reply</string>
+</resources>
