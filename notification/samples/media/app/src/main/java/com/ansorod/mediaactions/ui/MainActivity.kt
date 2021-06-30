@@ -1,12 +1,13 @@
-package com.ansorod.mediaactions
+package com.ansorod.mediaactions.ui
 
 import android.app.NotificationManager
-import android.content.Context
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.ansorod.mediaactions.R
+import com.ansorod.mediaactions.helper.NotificationHelper
+import com.ansorod.mediaactions.service.DownloadService
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
             NotificationHelper.createMediaNotificationChannel(this)
             val notification = NotificationHelper.getAlbumNotification(this, BitmapFactory.decodeResource(resources, coverRes), "Track title", "Artist - Album")
-            val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
             manager.notify(0, notification)
 
         }, getCoverList())
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         albumCoverRecycleView.adapter = adapter
         albumCoverRecycleView.layoutManager = layoutManager
+
+        downloadButton.setOnClickListener {
+            DownloadService.startDownload(this)
+        }
     }
 
     private fun getCoverList(): List<Int> {

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MediaActions</string>
+
+    <string name="notification_download_title">Downloading file</string>
+
+    <string name="notification_download_progress">%1$s%%</string>
+
+    <string name="notification_action_cancel">Cancel</string>
+    <string name="button_start_download">Download</string>
 </resources>
