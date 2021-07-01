@@ -65,6 +65,8 @@ object NotificationHelper {
 
     fun bubbleNotification(context: Context) {
         val intent = Intent(context, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+
         val pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT)
 
         val partner = Person.Builder()
@@ -73,6 +75,7 @@ object NotificationHelper {
             .build()
 
         val shortcutIntent = Intent(context, MainActivity::class.java)
+        shortcutIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         shortcutIntent.action = Intent.ACTION_VIEW
 
         val shortcut = ShortcutInfoCompat.Builder(context, "0")

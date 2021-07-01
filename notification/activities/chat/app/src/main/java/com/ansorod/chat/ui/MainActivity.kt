@@ -8,7 +8,6 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ansorod.chat.R
-import com.ansorod.chat.notification.NotificationHelper
 import com.ansorod.chat.presentation.ChatViewModel
 import com.ansorod.chat.ui.adapter.MessageAdapter
 import kotlinx.android.synthetic.main.activity_main.*

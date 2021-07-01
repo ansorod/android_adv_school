@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chat</string>
+
+    <string name="hint_user_name">Your name here</string>
+    <string name="button_save">Save</string>
+
+    <string name="menu_edit_user">Edit user</string>
+</resources>
