@@ -2,20 +2,16 @@ package com.ansorod.chat.service
 
 import android.util.Log
 import com.ansorod.chat.data.MessageRepository
-import com.ansorod.chat.data.model.MessageData
+import com.ansorod.chat.notification.NotificationHelper
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import org.koin.android.ext.android.get
-import org.koin.core.context.GlobalContext
 
 class ChatFirebaseMessagingService: FirebaseMessagingService() {
 
@@ -41,6 +37,8 @@ class ChatFirebaseMessagingService: FirebaseMessagingService() {
             GlobalScope.launch {
                 withContext(Dispatchers.IO) {
                     repo.insertMessage(username, text, timestamp)
+//                    NotificationHelper.notifyChatConversation(applicationContext, username, text)
+                    NotificationHelper.bubbleNotification(applicationContext)
                 }
             }
 

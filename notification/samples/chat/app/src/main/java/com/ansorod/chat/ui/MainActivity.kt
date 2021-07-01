@@ -8,6 +8,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ansorod.chat.R
+import com.ansorod.chat.notification.NotificationHelper
 import com.ansorod.chat.presentation.ChatViewModel
 import com.ansorod.chat.ui.adapter.MessageAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,7 +35,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.editUser) {
-            startActivity(Intent(this, EditUserActivity::class.java))
+//            startActivity(Intent(this, EditUserActivity::class.java))
+            NotificationHelper.bubbleNotification(this)
             return true
         }
         return super.onOptionsItemSelected(item)

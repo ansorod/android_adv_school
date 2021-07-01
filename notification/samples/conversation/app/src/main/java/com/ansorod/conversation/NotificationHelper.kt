@@ -72,6 +72,4 @@ object NotificationHelper {
         intent.putExtra(ReplyContentReceiver.EXTRA_CONVERSATION_ID, 0)
         return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
     }
-
-
 }

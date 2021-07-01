@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chat"
         android:name=".ChatApp">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.MainActivity"
+            android:resizeableActivity="true"
+            android:allowEmbedded="true"
+            android:documentLaunchMode="always">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

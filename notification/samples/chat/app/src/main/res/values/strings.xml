@@ -5,4 +5,6 @@
     <string name="button_save">Save</string>
 
     <string name="menu_edit_user">Edit user</string>
+
+    <string name="notification_action_reply">Reply</string>
 </resources>
